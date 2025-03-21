@@ -1,8 +1,8 @@
 import "./TodayWeatherCard.css";
 
 function TodayWeatherCard(props) {
-  const { temp, temp_max, temp_min, humidity, wind } = props.data;
-
+  const { temp, temp_max, temp_min, wind} = props.data;
+  const {humidity} = props.data.main;
   return (
     <div class="today-weather-card">
       TodayWeatherCard
@@ -10,7 +10,7 @@ function TodayWeatherCard(props) {
       <p>{temp_max}</p>
       <p>{temp_min}</p>
       <p>{humidity}</p>
-      <p>{wind}</p>
+      <p>{wind.speed}</p>
     </div>
   );
 }

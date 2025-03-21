@@ -2,8 +2,12 @@ import CityWeatherCard from "../CityWeatherCard/CityWeatherCard";
 import ForecastWeatherCard from "../ForecastWeatherCard/ForecastWeatherCard";
 import TodayWeatherCard from "../TodayWeatherCard/TodayWeatherCard";
 import "./WeatherMainContainer.css";
-
+import { useState, useEffect } from "react";
+import {getWeather} from '../../api/backend'
 function WeatherMainContainer() {
+
+  const [data, setData] = useState();
+
   const apiData = {
     temp: 32,
     temp_max: 35,
@@ -47,11 +51,23 @@ function WeatherMainContainer() {
     },
   ];
 
+  useEffect(() => {
+    const fetchData = async() => {
+      const result = await getWeather();
+      setData(result.data)
+    };
+    fetchData();
+  }, []);
+  if (!data) {
+    return <></>;
+  }
+
+  
   return (
     <div className="weather-main-container flex">
-      <TodayWeatherCard data={apiData} />
+      <TodayWeatherCard data={data[0]} />
       <div>
-        <ForecastWeatherCard foreCastData={foreCastData} />
+        <ForecastWeatherCard foreCastData={data.filter(item => item.dt_txt.includes('12:00'))} />
         <CityWeatherCard cities={cityData} />
       </div>
     </div>

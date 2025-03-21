@@ -11,4 +11,4 @@ module.exports = {
         prefix: process.env.prefix ?? "/api/v1",
     },
     openWeatherApiKey: process.env.OPENWEATHER_APIKEY,
-}
+};

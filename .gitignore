@@ -1,6 +1,6 @@
 /.DS_Store
 /.vscode
 /WeatherAppSource
+WeatherBackEnd/weather-app-backend/.env
 WeatherBackEnd/weather-app-backend/node_modules/
-
 WeatherFrontEnd/weather-app-front/node_modules/

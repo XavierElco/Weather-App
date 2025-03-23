@@ -1,10 +1,24 @@
 .today-weather-card {
-    background-color:aqua;
+    background-color:rgb(60, 164, 255);
+    background-image: url(../../assets/background/Rain_background.png);
+    background-size: 95%;
     padding: 25px; 
     box-sizing: border-box;
+    border-radius: 35px;
+    color:white;
+    margin: 25px;
+    width:300px;
+
+    min-width: 300px;
+    max-width: 300px;
 }
 
-.temp {
-    max-width: 150px;
-    width:100%;
+
+
+.weather-icon{
+    transform: scale(0.8);
+    transform-origin: center;
+    display: block;
+    margin: 0 auto;
 }
+

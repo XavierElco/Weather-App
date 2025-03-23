@@ -1,3 +1,7 @@
 .city-weather-card {
-    background-color: brown;
+    background-color: #f5f5f5;
+    margin: 25px;
+    margin-left: 0;
+    margin-top: 0;
+    height: 200px;
   }

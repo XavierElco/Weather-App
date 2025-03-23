@@ -66,7 +66,7 @@ function WeatherMainContainer() {
   return (
     <div className="weather-main-container flex">
       <TodayWeatherCard data={data[0]} />
-      <div>
+      <div >
         <ForecastWeatherCard foreCastData={data.filter(item => item.dt_txt.includes('12:00'))} />
         <CityWeatherCard cities={cityData} />
       </div>
